@@ -7,7 +7,7 @@ def load_all_sentences(source_dir):
     directory = os.fsencode(source_dir)
     for data_file in os.listdir(directory):
         filename = os.fsdecode(data_file)
-
+        print("loading from", filename)
         file_path = source_dir + filename
         all_sentences += load_sentences_from_file(file_path)
 
