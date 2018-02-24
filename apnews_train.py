@@ -1,5 +1,6 @@
 import gensim
+from dataset_loader import load_all_sentences
 
 if __name__ == "__main__":
-    print("HELLO")
-
+    sentences = load_all_sentences("cleaned_corpus/")
+    print(len(sentences))
