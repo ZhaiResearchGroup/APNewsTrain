@@ -7,9 +7,10 @@ def load_all_sentences(source_dir):
     directory = os.fsencode(source_dir)
     for data_file in os.listdir(directory):
         filename = os.fsdecode(data_file)
-
+        
         file_path = source_dir + filename
-        all_sentences += load_sentences_from_file(file_path)
+        new_sentencs = load_sentences_from_file(file_path)
+        all_sentences.extend(new_sentencs)
 
     return all_sentences
 
