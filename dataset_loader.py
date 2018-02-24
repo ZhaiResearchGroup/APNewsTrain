@@ -10,7 +10,6 @@ def load_all_sentences(source_dir):
 
         file_path = source_dir + filename
         new_sentences = load_sentences_from_file(file_path)
-        print(len(new_sentences))
         all_sentences.extend(new_sentences)
 
     return all_sentences
